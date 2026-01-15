@@ -1,16 +1,14 @@
 import org.junit.jupiter.api.Test;
 import software.ulpgc.aoc.reto01.command.*;
 import software.ulpgc.aoc.reto01.controller.*;
-import software.ulpgc.aoc.reto01.io.*;
 import software.ulpgc.aoc.reto01.model.*;
-import software.ulpgc.aoc.reto01.view.*;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 
-class Day01Test {
+class Reto01Test {
 
     // TEST IO - SAFEDIAL
 
