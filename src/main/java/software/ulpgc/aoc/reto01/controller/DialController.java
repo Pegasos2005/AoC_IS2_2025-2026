@@ -15,8 +15,8 @@ public class DialController {
         return (direction == 'R') ? new RightRotation(distance) : new LeftRotation(distance);
     }
 
-    public void processTimesInZero(List<String> data) {
-        SafeDial dial = new SafeDial(50);
+    public long processTimesInZero(List<String> data, int dialPosition) {
+        SafeDial dial = new SafeDial(dialPosition);
         long total = data.stream()
                 .map(this::moveDial)
                 .filter(cmd -> {
@@ -27,10 +27,11 @@ public class DialController {
 
         // VIEW
         printTotal(total);
+        return total;
     }
 
-    public void processTimesByZero(List<String> data) {
-        SafeDial dial = new SafeDial(50);
+    public long processTimesByZero(List<String> data, int dialPosition) {
+        SafeDial dial = new SafeDial(dialPosition);
 
         // Pipeline funcional: transformamos líneas en comandos y sumamos sus resultados[cite: 513].
         long total = data.stream()
@@ -40,6 +41,7 @@ public class DialController {
 
         // VIEW
         printTotal(total);
+        return total;
     }
 
     private void printTotal(long total) {

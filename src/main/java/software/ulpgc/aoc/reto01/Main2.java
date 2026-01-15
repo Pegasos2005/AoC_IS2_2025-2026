@@ -14,7 +14,7 @@ public class Main2 {
             Reader reader = new FileInputReader(INPUT_PATH);
 
             // CONTROLLER
-            new DialController().processTimesByZero(reader.readLines());
+            new DialController().processTimesByZero(reader.readLines(), 50);
 
         } catch (Exception e) {
             e.printStackTrace();

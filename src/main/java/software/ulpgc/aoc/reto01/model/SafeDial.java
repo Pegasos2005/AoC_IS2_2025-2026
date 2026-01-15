@@ -29,4 +29,6 @@ public class SafeDial {
     public boolean isAtZero() {
         return this.position == 0;
     }
+
+    public int getDial() { return position; }
 }
